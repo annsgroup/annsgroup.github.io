@@ -11,6 +11,11 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
+   <!-- Animasi AOS -->
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
     <!-- CSS ANNS GROUP -->
     <link rel="stylesheet" href="style.css" />
 
@@ -63,7 +68,7 @@
     <section class="jumbotron text-center">
       <img src="img/annsgroup.jpeg" alt="ANNS GROUP" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4 fw-bold pb-1">ANNS GROUP</h1>
-      <p class="lead fst-italic">Forever Trusted</p>
+      <p class="lead fst-italic"></p>
 
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
@@ -86,13 +91,13 @@
           </div>
         </div>
         <div class="row justify-content-between fs-5 text-center">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="2000">
             <p>
               ANNS GROUP Adalah sebuah perusahaan teknologi yang menciptakan satu produk seperti computer, laptop dan juga smartphone. yang dimana nantinya ANNS GROUP ini bisa membantu setiap kalangan dalam memilih serta memilah jenis
               produk yang di inginkan sesuai keinginan konsumen.
             </dd></p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="200">
             <p>
               ANNS GROUP ini nantinya akan bisa bersaing dengan perusahaan-perusahaan teknologi lain nya khususnya di indonesia, bahkan juga bisa bersaing dengan perusahaan di seluruh dunia. Serta yang paling penting ANNS GROUP ini
               selamanya terpercaya sesuai slogan kami "Forever Trusted".
@@ -116,7 +121,7 @@
         </div>
         <div class="row">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500">
               <img src="img/projects/computer.jpg" class="card-img-top" alt="ProjectComputer">
               <div class="card-body">
                 <p class="card-text"> Computer ANNS ini dibuat sedemikian rupa, untuk memenuhi
@@ -129,7 +134,7 @@
           </div>
 
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="200">
               <img src="img/projects/laptop.jpg" class="card-img-top" alt="ProjectLaptop">
               <div class="card-body">
                 <p class="card-text">Tidak jauh dengan Computer ANNS , Laptop ANNS  ini dibuat sebagus mungkin, 
@@ -140,7 +145,7 @@
           </div>
 
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="300">
               <img src="img/projects/smartphone.jpg" class="card-img-top" alt="ProjectSmartPhone">
               <div class="card-body">
                 <p class="card-text">Smartphone ANNS sengaja dibuat agar bisa bersaing dengan smartphone lain pada
@@ -160,6 +165,38 @@
 
     <!-- //_ Penutup Projects ANNS GROUP _// -->
 
+<!-- //_ Gallery ANNS GROUP _// -->
+<section id="gallery">
+  <div class="container">
+    <div class="row text-center mb-3">
+      <div class="col">
+        <h2>Gallery ANNS GROUP</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-3">
+        <a href="#">
+          <img src="img/gallery/1.jpg" alt="Gambar 1" class="img-fluid gallery-img">
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="#">
+          <img src="img/gallery/2.jpg" alt="Gambar 2" class="img-fluid gallery-img">
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="#">
+          <img src="img/gallery/3.jpg" alt="Gambar 3" class="img-fluid gallery-img">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- //_ Penutup Gallery ANNS GROUP _// -->
+
+
 
 <!-- //_ Pendiri ANNS GROUP _// -->
 
@@ -167,7 +204,7 @@
   <h1 class="display-4 fw-bold pb-1">PENDIRI ANNS GROUP</h1>
   <img src="img/AdlyAnsariNasutioN.jpeg" alt="Adly Ansari NasutioN" width="210" class="rounded-circle img-thumbnail" />
   <h2 class="display-4 fw-3 pb-1">Adly Ansari NasutioN</h2>
-  <p class="lead fw-2">Programmer | Youtuber | Businessman</p>
+  <p class="lead fw-2"></p>
 
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
     <path
@@ -239,6 +276,34 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
   
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      const galleryImage = document.querySelectorAll('.gallery-img');
+
+      galleryImage.forEach((img, i) => {
+        img.dataset.aos = 'fade-down';
+        img.dataset.aosDelay = i * 100;
+        img.dataset.aosDuration = 100;
+      });
+
+
+      AOS.init({
+        once: true,
+      });
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/TextPlugin.min.js"></script>
+<script>
+gsap.registerPlugin(TextPlugin);
+gsap.to('.lead', {duration: 2, delay: 1, text: 'Forever Trusted'})
+gsap.from('.jumbotron img', { duration: 1, rotateY: 360, opacity: 0 });
+gsap.from('.navbar', { duration: 1.5, y: '-100%', opacity: 0, ease: 'bounce'});
+gsap.from('.display-4', { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: 'back'});
+gsap.from('.jumbotron img pendiri', { duration: 1, rotateY: 360, opacity: 0 });
+gsap.from('.display pendiri', { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: 'back'});
+</script>
+
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycby0dCnL7B89fHvSpBhmuY5JtgKFPOfatvF_fddXw0rum4Q7RZJPfVmocQZYWyGvBJDwvg/exec'
       const form = document.forms['annsgroup-contact-form']
