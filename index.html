@@ -159,6 +159,45 @@
         </div>
       </div>
 
+      <section id="my-keyboards">
+        <div class="container">
+          <div class="row text-center mb-3">
+            <div class="col">
+              <h2>KEYBOARD ANNS GROUP</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="keyboard-box">
+                <h4 class="keyboard-name">KeyCron K2</h4>
+                <img src="img/keyboards/key22.jpg" alt="Keycron K3" class="keyboard-img">
+                <a href="#" class="btn btn-light keyboard-detail-button">Show Detail</a>
+              </div>
+
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="keyboard-box">
+                <h4 class="keyboard-name">Womier RGB</h4>
+                <img src="img/keyboards/key20.jpg" alt="Womier RGB" class="keyboard-img">
+                <a href="#" class="btn btn-light keyboard-detail-button">Show Detail</a>
+              </div>
+
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="keyboard-box">
+                <h4 class="keyboard-name">Red Dragon</h4>
+                <img src="img/keyboards/key19.jpg" alt="Red Dragon" class="keyboard-img">
+                <a href="#" class="btn btn-light keyboard-detail-button">Show Detail</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,234.7C384,245,480,203,576,208C672,213,768,267,864,256C960,245,1056,171,1152,154.7C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
 
     </section>
@@ -204,7 +243,7 @@
   <h1 class="display-4 fw-bold pb-1">PENDIRI ANNS GROUP</h1>
   <img src="img/AdlyAnsariNasutioN.jpeg" alt="Adly Ansari NasutioN" width="210" class="rounded-circle img-thumbnail" />
   <h2 class="display-4 fw-3 pb-1">Adly Ansari NasutioN</h2>
-  <p class="lead fw-2"></p>
+  <p class="lead fw-2"> Programmer | Businessman | Youtuber</p>
 
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
     <path
@@ -334,6 +373,15 @@ gsap.from('.display pendiri', { duration: 1, x: -50, opacity: 0, delay: 0.5, eas
           .catch(error => console.error('Error!', error.message))
       })
     </script>
+
+<script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+<script type="text/javascript">
+	VanillaTilt.init(document.querySelectorAll('.keyboard-box'), {
+		max: 35,
+		speed: 10000,
+    glare: true,
+	});
+</script>
   
   </body>
 </html>
